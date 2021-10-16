@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for each_question in question_list %}
+    {% include 'snippets/question_card.html' with each_question=each_question %}
+{% endfor %}
+
+{% include 'snippets/pagination.html' with page_obj=page_obj %}
+
+
+{% endblock %}
+
